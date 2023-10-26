@@ -51,3 +51,7 @@ All these requirements have been covered
     4. DB calls to be made async
     5. linting and formatting checks
     6. Sonarcube checks for vunerabilities
+
+![Docker Hub](dockerhub.png)
+![Swagger Page from GKE](swagger.png)
+![GKE](GKE.png)
