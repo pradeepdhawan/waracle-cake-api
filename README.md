@@ -55,4 +55,5 @@ All these requirements have been covered
 ![Docker Hub](dockerhub.png)
 ![Swagger Page from GKE](swagger.png)
 ![GKE](GKE.png)
+![GKE](GKE_all.png)
 ![GCE](GCE.png)
