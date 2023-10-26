@@ -10,13 +10,13 @@ class CakeBase(BaseModel):
     yumFactor: int
 
     @validator("name")
-    def check_range(cls, v):
-        if len(v) > 200:
+    def check_name(cls, v):
+        if len(v) > 30:
             raise ValueError("Name can only be 30 characters long")
         return v
 
     @validator("comment")
-    def check_range(cls, v):
+    def check_comment(cls, v):
         if len(v) > 200:
             raise ValueError("Comments can only be 200 characters long")
         return v
