@@ -9,6 +9,18 @@ class CakeBase(BaseModel):
     imageUrl: str
     yumFactor: int
 
+    @validator("name")
+    def check_range(cls, v):
+        if len(v) > 200:
+            raise ValueError("Name can only be 30 characters long")
+        return v
+
+    @validator("comment")
+    def check_range(cls, v):
+        if len(v) > 200:
+            raise ValueError("Comments can only be 200 characters long")
+        return v
+
     @validator("yumFactor")
     def check_range(cls, v):
         if v <= 0 or v > 5:
@@ -22,20 +34,6 @@ class CakeDelete(BaseModel):
 
 class CakeInsert(CakeBase):
     pass
-
-
-class CakeUpdate(BaseModel):
-    id: int
-    name: Optional[str]
-    comment: Optional[str]
-    imageUrl: Optional[str]
-    yumFactor: Optional[int]
-
-    @validator("yumFactor")
-    def check_range(cls, v):
-        if v <= 0 or v > 5:
-            raise ValueError("yumFactor must be between 1 and 5 inclusive")
-        return v
 
 
 class CakeGet(CakeBase):
