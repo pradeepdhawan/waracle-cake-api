@@ -34,8 +34,9 @@ All these requirements have been covered
 ## Steps
     1. Create virtual environment : python -m venv .venv
     2. Activate virtual environement : .\.venv\Scripts\activate
-    3. Run FastAPI : uvicorn app.main:app --reload
-    4. Browse to : http://127.0.0.1:8000 
+    3. Install requirements python -m pip install -r ./requirements.txt
+    4. Run FastAPI : uvicorn app.main:app --reload
+    5. Browse to : http://127.0.0.1:8000 
 
 ## Tech stack
     Language: Python
